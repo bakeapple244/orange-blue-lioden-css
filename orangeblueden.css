@@ -1,0 +1,210 @@
+/* have fun remembering what any of this shit is. 
+made by bakeapple #445518, please do not use unless you have permission. however, feel free to dm me on lioden with any questions*/
+/* Fonts, for all items*/
+@import url('https://fonts.googleapis.com/css2?family=Galindo&display=swap&family=Slackey&family=Unkempt:wght@400;700&family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Chelsea+Market');
+
+body {font-family: "Averia Libre", "unkempt", system-ui;
+    font-weight: 700;}
+    
+.topbar {font-family: "Averia Libre", "unkempt", system-ui;
+    font-weight: 700}
+
+.navbar {font-family: "Galindo", "Chelsea Market", fantasy;}
+
+.xlarge {font-family: "Slackey", "Galindo", "Freckle Face", "Chelsea Market", fantasy;}
+
+.alert {font-family: "Chelsea market", fantasy;}
+
+.cave-grid {font-family: "Chelsea Market", fantasy;}
+
+.mound-grid {font-family: "Chelsea Market", fantasy;}
+
+table.table:is(:nth-of-type(1), :nth-of-type(3), :nth-of-type(2) :nth-of-type(4)) :is(th, .top)  {
+    font-family: "Chelsea market", fantasy;}
+
+
+h1 {font-family: "Slackey", "Galindo", "Chelsea Market", fantasy;
+    color: var(--terracotta);
+    font-size: 28px;}
+
+h2 {font-family: "Galindo", "Chelsea Market", fantasy;
+    color: var(--teal);}
+
+h3 {font-family: "Slackey", "Galindo", "Chelsea Market", fantasy;}
+
+/* fonts in url:
+Galindo (header 2), Slackey (header 1), Unkempt (body back-up), Chelsea Market (header 3), Averia Libre (body and whatnot) */
+
+/* colour variables, remember its color not colour.. 
+opacity adjustment rgb(from var(--variable) r g b / 0.#) */
+:root {
+    --peacock: #053845;
+    --teal: #317786;
+    --provolone: #F3E9D1;
+    --muted-coral: #EFA27E;
+    --terracotta: #B94F30;
+}
+/* large screens */
+@media screen and (min-width: 601px) {
+body {
+    background: url('https://github.com/bakeapple244/orange-blue-lioden-css/blob/main/BLUE%20ORANGE%20BG%20LANDSCAPE.png?raw=true');
+    background-repeat: no-repeat; 
+    background-position: center top;
+    background-size: 100%, auto;
+    background-attachment: fixed;
+ 
+    }}
+/* phone/small screens CHANGE TO FIXED POS */
+@media screen and (max-width: 600px) {
+    body {
+    background: url('https://github.com/bakeapple244/orange-blue-lioden-css/blob/main/BLUE%20ORANGE%20BG.png?raw=true');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%, auto;
+    background-attachment: scroll;
+}}
+/* link colours, change visited colour maybe */
+a:link {
+    color: var(--muted-coral);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+}
+a:visited {
+    color: oklch(from var(--muted-coral) calc(l + 0.15) calc(c * 0.5) h);
+    background: none;
+    text-decoration: underline;
+    text-decoration-color: transparent;}
+
+a:hover {
+    color: var(--terracotta);
+    text-decoration-color: var(--muted-coral);
+    transition: color 0.4s ease;
+    transition: text-decoration 0.4s;
+    text-decoration-style: double;
+}
+/* alerts? */
+.alert-success {
+    color: var(--teal);
+    background: linear-gradient(to right, rgb(from var(--teal) r g b / 0.6), rgb(from var(--teal) r g b / 0.3));
+    border-color: rgb(from var(--peacock) r g b / 0.4);
+    border-style: double; !important
+}
+.alert-success a:link,
+.alert-success a:visited {
+    color: var(--peacock);
+    font-weight: normal;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+}
+.alert-success a:hover{
+    color: var(--terracotta);
+    text-decoration: underline;
+    text-decoration-color: var(--muted-coral);
+    text-decoration-style: double;
+    transition: color 0.4s;
+    transition: text-decoration 0.4s;
+}
+
+.alert-danger {
+    color: var(--terracotta);
+    background:  linear-gradient(to right, rgb(from var(--muted-coral) r g b / 0.6), rgb(from var(--muted-coral) r g b / 0.3));
+    border-color: rgb(from var(--terracotta) r g b / 0.5);
+}
+/* SCROLLBAR? */
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, rgb(from var(--provolone) r g b / 0.8), rgb(from var(--muted-coral) r g b / 0.8));
+   }
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, rgb(from var(--teal) r g b / 0.65), rgb(from var(--teal) r g b / 0.4));
+}
+
+/* topbar */
+.container.topbar {
+    background: linear-gradient(to top, rgb(from var(--teal) r g b / 0.85), rgb(from var(--peacock) r g b / 0.65));
+    color: var(--provolone);
+    font-size: 13px;
+    font-weight: 700;
+}
+@media screen and (min-width: 601px) {
+    .container.topbar {
+      border: none;
+      border-radius: 0 0 15px 15px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .container.topbar {
+        border: none;
+        border-radius: 0;
+    }
+}
+.container.topbar a:link,
+.container.topbar a:visited {
+    color: var(--muted-coral);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+}
+.container.topbar a:hover {
+    color: var(--provolone);
+    text-decoration: underline;
+    text-decoration-color: var(--muted-coral);
+    transition: text-decoration 0.4s;
+    text-decoration-style: double;
+}
+
+/* umm navbar, sure */
+.navbar {
+    background: radial-gradient(circle, rgb(from var(--terracotta) r g b / 0.65), rgb(from var(--terracotta) r g b / 0.3));
+    color: var(--provolone);
+}
+@media screen and (min-width: 601px) {
+    .navbar {
+      border: none;
+      border-radius: 15px 15px 0 0;
+    }
+}
+@media screen and (max-width: 600px) {
+    .navbar {
+        border: none;
+        border-radius: 0;
+    }
+}
+.navbar-toggle {
+border: none;
+background: #HEX;
+}
+
+.navbar-collapse {
+box-shadow: none;
+border-top: none;
+}
+
+/*main container, i shoulda done this sooner*/
+.container.main {
+    background: linear-gradient(to top, rgb(from var(--teal) r g b / 0.8), rgb(from var(--muted-coral) r g b / 0.8));   
+    color: var(--peacock);
+    box-shadow: none;
+}
+.col-md-9 {
+    background: rgb(from var(--provolone) r g b / 0.5);
+}
+
+@media screen and (min-width: 601px) {
+    .container.main {
+      border: none;
+      border-radius: 15px 15px 0 0;
+    }
+}
+@media screen and (max-width: 600px) {
+    .container.main {
+        border: none;
+        border-radius: 0;
+    }
+}
+/* breadcrumb next ig, should i credit myself? probably safety precaution */
+.breadcrumb {
+    
+}
