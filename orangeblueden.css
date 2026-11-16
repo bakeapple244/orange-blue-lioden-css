@@ -375,7 +375,7 @@ textarea#comment::placeholder {
 @media screen and (max-width: 600px) {
     #postComment {
         float: right !important;
-        margin-right: -10px !important; 
+        margin-right: -30px !important; 
     }
 }
 input#postComment:hover, 
