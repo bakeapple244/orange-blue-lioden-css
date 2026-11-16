@@ -375,7 +375,7 @@ textarea#comment::placeholder {
 @media screen and (max-width: 600px) {
     #postComment {
         float: right !important;
-        margin-right: -30px !important; 
+        margin-right: -10px !important; 
     }
 }
 input#postComment:hover, 
@@ -388,20 +388,54 @@ text-shadow: none !important;
 }
 @media screen and (min-width: 601px) {
 .comment:nth-child(odd) {
-      background: url('https://github.com/bakeapple244/orange-blue-lioden-css/blob/main/BLUE%20ORANGE%20BG%20LANDSCAPE.png?raw=true');
+      background-image: 
+          linear-gradient(to left,rgb(from var(--muted-coral) r g b / 0.4),rgb(from var(--muted-coral) r g b / 0.85)), 
+          url('https://github.com/bakeapple244/orange-blue-lioden-css/blob/main/BLUE%20ORANGE%20BG%20LANDSCAPE.png?raw=true');
     background-repeat: no-repeat; 
     background-position: center top;
     background-size: 100%, auto;
     background-attachment: fixed;
+    color: var(--terracotta);
+}
+.comment:nth-child(even) {
+       background-image: 
+          linear-gradient(to left,rgb(from var(--teal) r g b / 0.4),rgb(from var(--teal) r g b / 0.85)), 
+         url('https://github.com/bakeapple244/orange-blue-lioden-css/blob/main/BLUE%20ORANGE%20BG%20LANDSCAPE.png?raw=true');
+    background-repeat: no-repeat; 
+    background-position: center top;
+    background-size: 100%, auto;
+    background-attachment: fixed;
+    color: var(--peacock);
+    }
+.commentText .text-muted {
+    color: rgb(from var(--peacock) r g b / 0.7);
 }}
 @media screen and (max-width: 600px) {
 .comment:nth-child(odd) {
-      background: url('https://github.com/bakeapple244/orange-blue-lioden-css/blob/main/BLUE%20ORANGE%20BG%20LANDSCAPE.png?raw=true');
+     background-image: 
+          linear-gradient(to left,rgb(from var(--muted-coral) r g b / 0.4),rgb(from var(--muted-coral) r g b / 0.85)), 
+         url('https://github.com/bakeapple244/orange-blue-lioden-css/blob/main/BLUE%20ORANGE%20BG.png?raw=true');
     background-repeat: no-repeat; 
     background-position: center top;
-    background-size: 100%, auto;
+    background-size: cover;
     background-attachment: fixed;
-}}
+    color: (--terracotta);
+    }
+    .comment:nth-child(even) {
+        background-image: 
+          linear-gradient(to left,rgb(from var(--teal) r g b / 0.4),rgb(from var(--teal) r g b / 0.85)), 
+         url('https://github.com/bakeapple244/orange-blue-lioden-css/blob/main/BLUE%20ORANGE%20BG.png?raw=true');
+    background-repeat: no-repeat; 
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    color: (--peacock);
+    }
+.commentText .text-muted {
+    color: rgb(from var(--peacock) r g b / 0.7);
+}
+}
+
 /* x buttons */
 input.bad,
 .bad {
@@ -425,5 +459,18 @@ input.bad:hover,
     transform: scale(1.1) !important;
     border-radius: 8px !important;
 }
-
-
+/* lioden logo change */
+  .navbar-header > a > img {
+   content: url('https://github.com/bakeapple244/orange-blue-lioden-css/blob/main/CROW%20LIODEN%20LOGO%20SLEEP.png?raw=true');
+    width: 192px;
+    height: auto;
+      margin-top: -55px;
+       transition: all 0.4s ease-out;
+}
+.navbar-header > a > img:hover {
+   content: url('https://github.com/bakeapple244/orange-blue-lioden-css/blob/main/CROW%20LIODEN%20LOGO.png?raw=true');
+    width: 192px;
+    height: auto;
+   margin-top: -35px;
+    transition: all 0.4s ease-out;
+}
