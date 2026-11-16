@@ -60,8 +60,8 @@ body {
     background: url('https://github.com/bakeapple244/orange-blue-lioden-css/blob/main/BLUE%20ORANGE%20BG.png?raw=true');
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: 100%, auto;
-    background-attachment: scroll;
+      background-size: cover;
+    background-attachment: fixed;
 }}
 /* link colours, change visited colour maybe */
 a:link {
@@ -395,6 +395,7 @@ text-shadow: none !important;
     background-position: center top;
     background-size: 100%, auto;
     background-attachment: fixed;
+}}
 /* x buttons */
 input.bad,
 .bad {
