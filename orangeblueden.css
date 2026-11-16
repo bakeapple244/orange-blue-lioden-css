@@ -105,10 +105,16 @@ a:hover {
     transition: text-decoration 0.4s;
 }
 
-.alert-danger {
-    color: var(--terracotta);
-    background:  linear-gradient(to right, rgb(from var(--muted-coral) r g b / 0.6), rgb(from var(--muted-coral) r g b / 0.3));
-    border-color: rgb(from var(--terracotta) r g b / 0.5);
+.alert-danger,
+.alert-warning {
+    color: var(--peacock);
+    background:  radial-gradient(circle, rgb(from var(--peacock) r g b / 0.4), rgb(from var(--peacock) r g b / 0.6));
+    border-color: rgb(from var(--teal) r g b / 0.5);
+}
+.alert-danger img {
+    content: url('https://github.com/bakeapple244/orange-blue-lioden-css/blob/main/alert-danger%20icon.png?raw=true');
+    width: 22px;
+    
 }
 /* SCROLLBAR? */
 ::-webkit-scrollbar {
@@ -158,7 +164,26 @@ a:hover {
 /* umm navbar, sure */
 .navbar {
     background: radial-gradient(circle, rgb(from var(--terracotta) r g b / 0.65), rgb(from var(--terracotta) r g b / 0.3));
-    color: var(--provolone);
+}
+.navbar li a {
+    transition: all 0.4s ease !important;
+     color: var(--provolone) !important;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-style: double;
+}
+
+.navbar li a:hover {
+    background-color: var(--terracotta) !important;
+    transform: scale(1.1) !important;
+    border-radius: 13px;
+    color: var(--muted-coral) !important;
+    text-decoration: underline;
+     text-decoration-color: rgb(from var(--muted-coral) r g b / 0.3);
+     text-decoration-style: double;
+    transition: text-decoration 0.2s;
+    transition: color 0.4s;
+}
 }
 @media screen and (min-width: 601px) {
     .navbar {
@@ -174,9 +199,22 @@ a:hover {
 }
 .navbar-toggle {
 border: none;
-background: #HEX;
+background: radial-gradient(circle, rgb(from var(--terracotta) r g b / 0.65), rgb(from var(--terracotta) r g b / 0.3));
+    transition: all 0.4s !important;
 }
-
+.navbar-toggle .icon-bar {
+    background-color: rgb(from var(--provolone) r g b / 0.5) !important;
+}
+.navbar-toggle:hover .icon-bar,
+.navbar-toggle:focus .icon-bar {
+    background-color: var(--muted-coral) !important;
+    transition: background-color 0.3s;
+}
+.navbar-toggle:hover,
+.navbar-toggle:focus {
+    background-color: var(--terracotta) !important;
+     transform: scale(1.1) !important;
+}
 .navbar-collapse {
 box-shadow: none;
 border-top: none;
@@ -192,6 +230,7 @@ border-top: none;
     background: rgb(from var(--provolone) r g b / 0.5);
 }
 
+
 @media screen and (min-width: 601px) {
     .container.main {
       border: none;
@@ -204,7 +243,180 @@ border-top: none;
         border-radius: 0;
     }
 }
-/* breadcrumb next ig, should i credit myself? probably safety precaution */
+/* breadcrumb next ig, should i credit myself? */
 .breadcrumb {
+    background: linear-gradient(5deg, rgb(from var(--teal) r g b / 0.6), rgb(from var(--muted-coral) r g b / 0.4));
+    ;
+}
+
+.breadcrumb .active {
+    color: var(--provolone);
+}
+.breadcrumb-item::before {
+    color: rgb(from var(--terracotta) r g b / 0.6) !important;
+}
+.breadcrumb::after {
+    content: "css by bakeapple #445518";
+    position: absolute;
+    right: 5%;
+    color: rgb(from var(--terracotta) r g b / 0.29);
+    z-index: 100%;  
+}
+/* comment box */
+div#commentBox {
+    height: 50px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    transition: height 0.4s ease-in-out !important;
+    cursor: pointer;
+    position: relative;
+    border-radius: 13px 13px 0 0;
+    background: none !important;
+}
+div#commentBox::before {
+    content: "something something change";
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px !important;
+    font-family: "galindo", fantasy;
+    background: radial-gradient(circle, rgb(from var(--provolone) r g b / 0.8), rgb(from var(--teal) r g b / 0.6));
+    color: var(--terracotta);
+    font-size: 25px;
+    text-align: center;
+    border-bottom: 3px double var(--peacock);
+     transition: all 0.4s ease-in-out !important;
+}
+div#commentBox:hover,
+div#commentBox:focus-within,
+div#commentBox:has(+ div#makeComment:focus-within),
+div#commentBox:has(~ div#makeComment:focus-within),
+div#commentBox:has(+ div#makeComment:hover) {
+    height: 300px !important;
+    overflow-y: auto !important;
+    cursor: auto;
+    border-radius: 12px 12px 0 0 !important;
+    transition: height 0.6s ease-in-out !important;
+}
+div#commentBox ~ br {
+    display: none !important;
+}
+
+div#commentBox:not(:focus-within)::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+div#commentBox:hover::-webkit-scrollbar,
+div#commentBox:focus-within::-webkit-scrollbar {
+    display: block !important;
+    width: 8px !important;
+}
+
+div#commentBox:hover + div#makeComment,
+div#commentBox:focus-within + div#makeComment,
+div#makeComment:focus-within {
+    height: 40px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    opacity: 1;
+    
+    overflow: hidden !important;
+}
+
+div#makeComment {
+    margin-top: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 0 13px 13px !important;
+    background: transparent;
+    height: 30px !important;
+        border: none !important;
+    border-top: none !important;
+    border-radius: 0 0 12px 12px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+     display: flex !important;
+    align-items: stretch !important;
+     transition: all 0.4s ease-in-out !important;
     
 }
+#comment {
+    background: linear-gradient(to right,rgb(from var(--terracotta) r g b / 0.6), rgb(from var(--terracotta) r g b / 0.2));
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--peacock) !important;
+    margin-right: 5px;
+    border-radius: 0 0 12px 12px;
+    font-family: "averia libre" "unkempt", system-ui;
+}
+input#comment, 
+textarea#comment {
+  color: var(--provolone) !important;
+    padding-left: 15px;
+}
+input#comment::placeholder,
+textarea#comment::placeholder {
+  color: var(--muted-coral) !important;
+  opacity: 0.8 !important;
+}
+#postComment {
+    background: var(--muted-coral);
+        opacity: 0.6;
+    color: var(--terracotta);
+        opacity: 0.9;
+    margin-right: 5px;
+    border-color: rgb(from var(--terracotta) r g b / 0.5);
+    transition: all 0.4s ease-in-out !important;
+    font-family: "chelsea market", fantasy;
+    text-shadow: none !important;
+    border-radius: 8px;
+}
+input#postComment:hover, 
+#postComment:hover {
+  color: var(--provolone) !important;
+  background-color: var(--terracotta) !important;
+  transform: scale(1.2) !important;
+text-shadow: none !important;
+    border-radius: 0px 0 12px 12px;
+}
+@media screen and (min-width: 601px) {
+.comment:nth-child(odd) {
+      background: url('https://github.com/bakeapple244/orange-blue-lioden-css/blob/main/BLUE%20ORANGE%20BG%20LANDSCAPE.png?raw=true');
+    background-repeat: no-repeat; 
+    background-position: center top;
+    background-size: 100%, auto;
+    background-attachment: fixed;
+}}
+@media screen and (max-width: 600px) {
+.comment:nth-child(odd) {
+      background: url('https://github.com/bakeapple244/orange-blue-lioden-css/blob/main/BLUE%20ORANGE%20BG%20LANDSCAPE.png?raw=true');
+    background-repeat: no-repeat; 
+    background-position: center top;
+    background-size: 100%, auto;
+    background-attachment: fixed;
+/* x buttons */
+input.bad,
+.bad {
+    background-color: rgb(from var(--provolone) r g b / 0.8) !important;
+        background-image: none !important;
+    color: var(--terracotta) !important;          
+    border: 1px solid var(--provolone) !important;
+    border-radius: 4px !important;      
+    text-shadow: none !important;    
+    box-shadow: none !important;        
+    border-radius: 6px !important;
+    transition: all 0.4s ease !important;
+}
+input.bad:hover,
+.bad:hover {
+    background-image: none !important;
+    background-color: rgb(from var(--terracotta) r g b / 0.6) !important;
+    color: rgb(from var(--provolone) r g b / 0.7) !important;
+    border-color: var(--terracotta) !important;
+    transition: all 0.4s ease !important;
+    transform: scale(1.1) !important;
+    border-radius: 8px !important;
+}
+
+
