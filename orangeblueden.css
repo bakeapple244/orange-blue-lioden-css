@@ -361,22 +361,16 @@ textarea#comment::placeholder {
   opacity: 0.8 !important;
 }
 #postComment {
-    background: var(--muted-coral);
+   background: var(--muted-coral);
         opacity: 0.6;
     color: var(--terracotta);
         opacity: 0.9;
-    margin-right: 5px;
+    margin-right: 5px !important;
     border-color: rgb(from var(--terracotta) r g b / 0.5);
     transition: all 0.4s ease-in-out !important;
     font-family: "chelsea market", fantasy;
     text-shadow: none !important;
     border-radius: 8px;
-}
-@media screen and (max-width: 600px) {
-    #postComment {
-        float: right !important;
-        margin-right: -10px !important; 
-    }
 }
 input#postComment:hover, 
 #postComment:hover {
